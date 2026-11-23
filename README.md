@@ -1,4 +1,4 @@
-# vyshalini-website
+# vysha-exe.github.io
 
 Personal site of Vyshalini Rajendran. Plain HTML, CSS and JavaScript with no build step, served by GitHub Pages.
 
