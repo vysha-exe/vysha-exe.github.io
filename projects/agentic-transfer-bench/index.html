@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic Transfer Bench | Vyshalini Rajendran</title>
+  <meta name="description" content="A design for an AI-agent framework that adapts PPG foundation models to new datasets.">
+  <meta property="og:title" content="Agentic Transfer Bench | Vyshalini Rajendran">
+  <meta property="og:description" content="A design for an AI-agent framework that adapts PPG foundation models to new datasets.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%233ddc7a'%3EVR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../../">Vyshalini Rajendran</a>
+      <nav aria-label="Main">
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">menu</button>
+        <ul id="nav-links">
+          <li><a href="../../">about</a></li>
+          <li><a href="../../projects/" aria-current="page">projects</a></li>
+          <li><a href="../../research/">research</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" type="button" aria-label="Switch color theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page">
+    <article class="detail">
+    <a class="back" href="../">← all projects</a>
+    <h1>Agentic Transfer Bench</h1>
+    <p class="one">A design for an AI-agent framework that adapts PPG foundation models to new datasets.</p>
+    <p class="venue">Vanderbilt BrainHack, 2026</p>
+    <div class="btns">
+      <a href="https://www.youtube.com/watch?v=_g11_lhBeKU">Presentation</a>
+    </div>
+
+    <figure class="shot">
+      <div class="logo-tile big" style="--tile:#0d100e"><span class="wordmark"><b>agentic</b>transfer&nbsp;bench</span></div>
+    </figure>
+
+    <h2>overview</h2>
+    <p>Foundation models trained on physiological signals often perform worse when the data shifts: a new device, population or recording setup. Agentic Transfer Bench looks at how an AI agent could manage adapting a photoplethysmography (PPG) foundation model to new data, and how to judge whether the adaptation worked. It is a research and design project, not a deployed system.</p>
+
+    <h2>what I worked on</h2>
+    <ul class="bul">
+      <li>Literature review on agentic ML pipelines, foundation-model adaptation under dataset shift, transfer learning and human-in-the-loop oversight.</li>
+      <li>A conceptual orchestration framework for adapting a PPG foundation model to a new dataset.</li>
+      <li>Evaluation criteria for whether an adaptation generalizes.</li>
+    </ul>
+
+    <h2>the framework</h2>
+    <ul class="bul">
+      <li>The framework keeps deterministic preprocessing separate from the decisions the agent makes, so each agent step can be inspected.</li>
+      <li>It defines the agent&#x27;s decision workflow and where a human reviews its choices.</li>
+      <li>Presented at Vanderbilt BrainHack 2026; the recording is linked above.</li>
+    </ul>
+    <p class="tags"><span>Agentic AI</span><span>Foundation models</span><span>Transfer learning</span><span>PPG</span><span>Evaluation</span></p>
+
+    <nav class="pager" aria-label="More projects"><a href="../kinetix/">← Kinetix</a><a href="../remit/">Remit →</a></nav>
+    </article>
+  </main>
+
+  <footer class="footer"><p>© <span id="year">2026</span> Vyshalini Rajendran.</p></footer>
+  <script src="../../script.js"></script>
+</body>
+</html>
