@@ -264,3 +264,5 @@ img { max-width: 100%; display: block; }
 /* experience details */
 .table .sub { margin: 8px 0 0; padding-left: 18px; list-style: disc; }
 .table .sub li { display: list-item; border: 0; padding: 3px 0; font-size: 15px; color: var(--muted); }
+.wordmark { text-align: center; }
+.wordmark br + * , .wordmark:has(br) { line-height: 1.25; }
