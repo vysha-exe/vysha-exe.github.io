@@ -188,7 +188,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- About: greeting ---------- */
-.hello { font-size: 26px; font-weight: 400; margin-bottom: 12px; }
+.bio .hello { font-size: 26px; font-weight: 400; margin-bottom: 12px; }
 
 /* ---------- Project list: clickable cards ---------- */
 .plist { display: grid; gap: 18px; margin-top: 28px; }
