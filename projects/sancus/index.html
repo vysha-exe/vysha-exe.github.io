@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sancus | Vyshalini Rajendran</title>
+  <meta name="description" content="One USDC balance to pay suppliers, staff and families across borders, with an AI agent that never moves money without you.">
+  <meta property="og:title" content="Sancus | Vyshalini Rajendran">
+  <meta property="og:description" content="One USDC balance to pay suppliers, staff and families across borders, with an AI agent that never moves money without you.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%233ddc7a'%3EVR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../../"><strong>Vyshalini</strong> Rajendran</a>
+      <nav aria-label="Main">
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">menu</button>
+        <ul id="nav-links">
+          <li><a href="../../">about</a></li>
+          <li><a href="../../projects/" aria-current="page">projects</a></li>
+          <li><a href="../../research/">research</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" type="button" aria-label="Switch color theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page">
+    <article class="detail">
+    <a class="back" href="../">← all projects</a>
+    <h1>Sancus</h1>
+    <p class="one">One USDC balance to pay suppliers, staff and families across borders, with an AI agent that never moves money without you.</p>
+    <p class="venue">UBC Hackathon, 2026 · team project</p>
+    <div class="btns">
+      <a href="https://sancus-peach.vercel.app">Live app</a>
+      <a href="https://github.com/vysha-exe/Sancus">Code</a>
+    </div>
+
+    <figure class="shot">
+      <div class="frame">
+        <img src="../../assets/img/projects/sancus.png" alt="Screenshot of Sancus">
+        <span class="ph" aria-hidden="true">assets/img/projects/sancus.png</span>
+      </div>
+    </figure>
+
+    <h2>overview</h2>
+    <p>Sancus is a stablecoin business account built on Circle&#x27;s developer suite and the Arc testnet. A company holds one dollar balance in USDC and pays people in Thailand (PromptPay), Indonesia (BI-FAST), Brazil (Pix) or US bank accounts (ACH) from it. The user picks who and how much; Sancus quotes the live rate, picks the rail and settles, and the blockchain stays invisible.</p>
+
+    <h2>what it does</h2>
+    <ul class="bul">
+      <li>Accounts that mirror real companies: HQ, country branches, employees and personal accounts, each with its own wallet, balance, limits and permissions.</li>
+      <li>An AI agent you can text or talk to (&quot;pay Siam Packaging 5,000 baht for invoice INV-88&quot;) that looks things up and prepares each payment as a card you confirm.</li>
+      <li>Agent payments in both directions over x402: the agent buys live route data from its own capped wallet, and Sancus sells its route quotes to other agents.</li>
+      <li>An &quot;Ask Sancus&quot; voice call on every page, using ElevenLabs text-to-speech, that answers questions about the screen, navigates and prepares payments.</li>
+    </ul>
+
+    <h2>how it's built</h2>
+    <ul class="bul">
+      <li>Every agent action is an HMAC-signed, expiring proposal bound to the user and the exact request. Only the user&#x27;s confirm, by tap or voice, runs it.</li>
+      <li>Next.js route handlers for payments, quotes, the agent loop and the proposal executor.</li>
+      <li>Circle developer-controlled wallets, App Kit, the Gateway unified balance and x402 nanopayments on Arc Testnet, with Supabase Postgres and row-level security.</li>
+      <li>A hackathon prototype on testnets: payout and card partners run in sandboxes or as clearly labeled simulations, with no real customer funds.</li>
+    </ul>
+    <p class="tags"><span>TypeScript</span><span>Next.js</span><span>Circle</span><span>Arc</span><span>x402</span><span>Supabase</span><span>OpenAI</span><span>ElevenLabs</span></p>
+
+    <nav class="pager" aria-label="More projects"><a href="../kinetix/">Kinetix →</a></nav>
+    </article>
+  </main>
+
+  <footer class="footer"><p>© <span id="year">2026</span> Vyshalini Rajendran.</p></footer>
+  <script src="../../script.js"></script>
+</body>
+</html>

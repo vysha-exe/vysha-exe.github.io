@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>projects | Vyshalini Rajendran</title>
-  <meta name="description" content="Projects by Vyshalini Rajendran: Remit, SysFlow, HashDecode, Kinetix, and Agentic Transfer Bench.">
+  <meta name="description" content="Projects by Vyshalini Rajendran: Sancus, Kinetix, Remit, SysFlow, Musodoro and HashDecode.">
+  <meta property="og:title" content="projects | Vyshalini Rajendran">
+  <meta property="og:description" content="Projects by Vyshalini Rajendran: Sancus, Kinetix, Remit, SysFlow, Musodoro and HashDecode.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%233ddc7a'%3EVR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +24,7 @@
         <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">menu</button>
         <ul id="nav-links">
           <li><a href="../">about</a></li>
-          <li><a href="./" aria-current="page">projects</a></li>
+          <li><a href="../projects/" aria-current="page">projects</a></li>
           <li><a href="../research/">research</a></li>
         </ul>
       </nav>
@@ -34,110 +37,81 @@
 
   <main id="main" class="wrap page">
     <h1 class="page-title">projects</h1>
-    <p class="page-desc">Software I've built on my own and with teams, including hackathon builds.</p>
-    <label class="sr" for="filter">Filter projects</label>
-    <input class="filter" id="filter" type="search" placeholder="Type to filter" autocomplete="off">
-
-    <ol class="entries">
-      <li class="entry">
+    <p class="page-desc">Things I've built. Click a project to learn more.</p>
+    <ol class="plist">
+      <li class="pcard">
         <div class="thumb">
-          <img src="../assets/img/projects/remit.png" alt="Screenshot of Remit" loading="lazy">
-          <span class="ph" aria-hidden="true">RM</span>
+          <img src="../assets/img/projects/sancus.png" alt="" loading="lazy">
+          <span class="ph" aria-hidden="true">SN</span>
         </div>
         <div>
-          <h2>Remit: Cross-Border Payments with On-Chain Settlement</h2>
-          <p class="who">Team project · TypeScript, Next.js, Express, TronWeb, Coinbase Advanced Trade API</p>
-          <p class="venue">UPenn Blockchain Hackathon, 2026</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-remit">Abs</button>
-            <a href="https://github.com/vysha-exe/Remit">Code</a>
-          </div>
-          <div class="abs" id="abs-remit" hidden>
-            <p>A consumer-facing payment prototype: a Next.js front end and Express backend with live FX previews, transfer tracking and transaction history. Settlement runs as TRC-20 transfers on the TRON Nile testnet through TronWeb, with real testnet transaction IDs recorded. The Coinbase Advanced Trade API handles account retrieval and USDC purchase flows over CDP JWT authentication.</p>
-            <p>Card data is kept to a minimum: the API stores only the last four digits, and expiry and CVV never reach the server. I split the technical and regulatory research across the team, coordinated the build under the deadline, and pitched the product. It's a testnet prototype, not a licensed or production payment service.</p>
-          </div>
+          <h2><a href="sancus/">Sancus</a></h2>
+          <p class="one">One USDC balance to pay suppliers, staff and families across borders, with an AI agent that never moves money without you.</p>
+          <p class="venue">UBC Hackathon, 2026 · team project</p>
+          <span class="more" aria-hidden="true">Read more →</span>
         </div>
       </li>
-
-      <li class="entry">
+      <li class="pcard">
         <div class="thumb">
-          <img src="../assets/img/projects/sysflow.png" alt="Screenshot of SysFlow" loading="lazy">
-          <span class="ph" aria-hidden="true">SF</span>
-        </div>
-        <div>
-          <h2>SysFlow: Full-Stack Tracking and Journaling App</h2>
-          <p class="who">Independent project · TypeScript, Next.js, MongoDB</p>
-          <p class="venue">Web application</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-sysflow">Abs</button>
-            <a href="https://github.com/vysha-exe/SysFlow">Code</a>
-          </div>
-          <div class="abs" id="abs-sysflow" hidden>
-            <p>Email and password accounts with data scoped to a workspace in MongoDB; live session timers that can run in parallel and split cleanly into history intervals; a timeline with analytics; profile management with custom field templates; and a searchable journal with full create, edit and delete.</p>
-          </div>
-        </div>
-      </li>
-
-      <li class="entry">
-        <div class="thumb">
-          <img src="../assets/img/projects/hashdecode.png" alt="Screenshot of HashDecode" loading="lazy">
-          <span class="ph" aria-hidden="true">HD</span>
-        </div>
-        <div>
-          <h2>HashDecode: Blockchain Transaction Decoder</h2>
-          <p class="who">Hackathon project · JavaScript, Node.js, Express</p>
-          <p class="venue">ETHGlobal hackathon, 2025</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-hashdecode">Abs</button>
-            <a href="https://github.com/vysha-exe/HashDecode">Code</a>
-          </div>
-          <div class="abs" id="abs-hashdecode" hidden>
-            <p>Takes a raw transaction hash and returns a readable summary of what happened on-chain, with decoding logic for DeFi swaps and smart-contract interactions.</p>
-          </div>
-        </div>
-      </li>
-
-      <li class="entry">
-        <div class="thumb">
-          <img src="../assets/img/projects/kinetix.png" alt="Screenshot of Kinetix" loading="lazy">
+          <img src="../assets/img/projects/kinetix.png" alt="" loading="lazy">
           <span class="ph" aria-hidden="true">KX</span>
         </div>
         <div>
-          <h2>Kinetix: Computer-Vision Physiotherapy Coach</h2>
-          <p class="who">Team project · JavaScript, FastAPI, Oracle Cloud, OCI Generative AI</p>
-          <p class="venue">Oracle HackTN, 2026</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-kinetix">Abs</button>
-            <a href="https://kinetix-six-drab.vercel.app/">Demo</a>
-            <a href="https://github.com/owhitleym-ui/kinetix">Code</a>
-          </div>
-          <div class="abs" id="abs-kinetix" hidden>
-            <p>Patients practise their physical therapist's home exercises with live, on-camera form feedback, and the therapist reviews progress and approves AI-drafted plan changes. Pose tracking runs in the browser: 33 body landmarks become 26 joint angles, and a logistic-regression classifier trained on 1,700 physiotherapist-labeled reps flags common form errors.</p>
-            <p>Oracle Cloud speech gives spoken coaching and Oracle Generative AI drafts session reports. I built backend components and the cloud integrations with my team.</p>
-          </div>
+          <h2><a href="kinetix/">Kinetix</a></h2>
+          <p class="one">Physiotherapy patients practise their home exercises with live, on-camera form feedback.</p>
+          <p class="venue">Oracle HackTN, 2026 · team project</p>
+          <span class="more" aria-hidden="true">Read more →</span>
         </div>
       </li>
-
-      <li class="entry">
+      <li class="pcard">
         <div class="thumb">
-          <img src="../assets/img/projects/agentic-transfer-bench.png" alt="Slide from the Agentic Transfer Bench talk" loading="lazy">
-          <span class="ph" aria-hidden="true">ATB</span>
+          <img src="../assets/img/projects/remit.png" alt="" loading="lazy">
+          <span class="ph" aria-hidden="true">RM</span>
         </div>
         <div>
-          <h2>Agentic Transfer Bench: Adapting Foundation Models Under Dataset Shift</h2>
-          <p class="who">Team project · literature review and framework design</p>
-          <p class="venue">Vanderbilt BrainHack, 2026 <span class="status">Conceptual</span></p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-atb">Abs</button>
-            <a href="https://www.youtube.com/watch?v=_g11_lhBeKU">Video</a>
-          </div>
-          <div class="abs" id="abs-atb" hidden>
-            <p>A review of agentic ML pipelines, foundation-model adaptation under dataset shift, transfer learning and human-in-the-loop oversight, applied to physiological (PPG) data. From it I designed an orchestration framework that separates deterministic preprocessing from agent decisions and defines how to evaluate adaptation and generalization. It's a framework design, not an implemented system.</p>
-          </div>
+          <h2><a href="remit/">Remit</a></h2>
+          <p class="one">Cross-border payments with on-chain settlement on the TRON testnet.</p>
+          <p class="venue">UPenn Blockchain Hackathon, 2026 · team project</p>
+          <span class="more" aria-hidden="true">Read more →</span>
+        </div>
+      </li>
+      <li class="pcard">
+        <div class="thumb">
+          <img src="../assets/img/projects/sysflow.png" alt="" loading="lazy">
+          <span class="ph" aria-hidden="true">SF</span>
+        </div>
+        <div>
+          <h2><a href="sysflow/">SysFlow</a></h2>
+          <p class="one">A full-stack tracking and journaling web app.</p>
+          <p class="venue">Independent project, 2026</p>
+          <span class="more" aria-hidden="true">Read more →</span>
+        </div>
+      </li>
+      <li class="pcard">
+        <div class="thumb">
+          <img src="../assets/img/projects/musodoro.png" alt="" loading="lazy">
+          <span class="ph" aria-hidden="true">MU</span>
+        </div>
+        <div>
+          <h2><a href="musodoro/">Musodoro</a></h2>
+          <p class="one">An exploratory look at EEG beta-band power during Pomodoro study sessions.</p>
+          <p class="venue">Independent project, 2025</p>
+          <span class="more" aria-hidden="true">Read more →</span>
+        </div>
+      </li>
+      <li class="pcard">
+        <div class="thumb">
+          <img src="../assets/img/projects/hashdecode.png" alt="" loading="lazy">
+          <span class="ph" aria-hidden="true">HD</span>
+        </div>
+        <div>
+          <h2><a href="hashdecode/">HashDecode</a></h2>
+          <p class="one">Paste an Ethereum transaction hash and get a plain-English explanation of what happened.</p>
+          <p class="venue">ETHGlobal hackathon, 2025</p>
+          <span class="more" aria-hidden="true">Read more →</span>
         </div>
       </li>
     </ol>
-    <p class="no-match" hidden>No projects match that filter.</p>
   </main>
 
   <footer class="footer"><p>© <span id="year">2026</span> Vyshalini Rajendran.</p></footer>

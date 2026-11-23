@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>research | Vyshalini Rajendran</title>
-  <meta name="description" content="Research by Vyshalini Rajendran: vFLIP3, NeuroStream, and a bibliometric study of deep learning for motor-imagery EEG.">
+  <meta name="description" content="vFLIP3: automated brain layer identification using spectrolaminar analysis and machine learning.">
+  <meta property="og:title" content="research | Vyshalini Rajendran">
+  <meta property="og:description" content="vFLIP3: automated brain layer identification using spectrolaminar analysis and machine learning.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%233ddc7a'%3EVR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +25,7 @@
         <ul id="nav-links">
           <li><a href="../">about</a></li>
           <li><a href="../projects/">projects</a></li>
-          <li><a href="./" aria-current="page">research</a></li>
+          <li><a href="../research/" aria-current="page">research</a></li>
         </ul>
       </nav>
       <button class="theme-btn" type="button" aria-label="Switch color theme">
@@ -34,91 +37,49 @@
 
   <main id="main" class="wrap page">
     <h1 class="page-title">research</h1>
-    <p class="page-desc">Machine learning and signal processing for neural data.</p>
-    <label class="sr" for="filter">Filter research</label>
-    <input class="filter" id="filter" type="search" placeholder="Type to filter" autocomplete="off">
+    <p class="page-desc">Machine learning and signal processing for neural data, in the Bastos Lab at the Vanderbilt Brain Institute.</p>
 
-    <ol class="entries">
-      <li class="entry">
-        <div class="thumb">
-          <img src="../assets/img/research/vflip3.png" alt="vFLIP3 poster figure" loading="lazy">
-          <span class="ph" aria-hidden="true">vF3</span>
-        </div>
-        <div>
-          <h2>vFLIP3: Automated Brain Layer Identification Using Spectrolaminar Analysis and Machine Learning</h2>
-          <p class="who">Bastos Lab, Vanderbilt Brain Institute · advised by Dr. Andre Bastos</p>
-          <p class="venue">Poster, VSTART Summer Research Symposium, 2026</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-vflip3">Abs</button>
-          </div>
-          <div class="abs" id="abs-vflip3" hidden>
-            <p>Laminar probes record from many depths of cortex at once, and researchers need to know which channels sit in which layer. Cortex has a spectral signature for this: gamma-band power is strongest in superficial layers, alpha/beta power in deeper ones, and the two cross near layer IV. vFLIP3 builds on the lab's vFLIP2 pipeline to find that crossover automatically.</p>
-            <figure class="motif">
-              <svg viewBox="0 0 280 300" role="img" aria-labelledby="motif-t motif-d">
-                <title id="motif-t">Spectrolaminar motif schematic</title>
-                <desc id="motif-d">Gamma power falls and alpha/beta power rises with cortical depth; the curves cross near layer IV.</desc>
-                <g class="ax"><line x1="48" y1="20" x2="48" y2="262"/><line x1="48" y1="262" x2="262" y2="262"/></g>
-                <g class="layers"><line x1="48" y1="70" x2="262" y2="70"/><line x1="48" y1="118" x2="262" y2="118"/><line x1="48" y1="150" x2="262" y2="150"/><line x1="48" y1="208" x2="262" y2="208"/></g>
-                <rect class="l4" x="48" y="118" width="214" height="32"/>
-                <g class="ltxt"><text x="40" y="48">I</text><text x="40" y="97">II/III</text><text x="40" y="138">IV</text><text x="40" y="182">V</text><text x="40" y="240">VI</text></g>
-                <path class="gamma" d="M236 26 C 220 70, 180 110, 150 134 S 80 210, 64 256"/>
-                <path class="beta" d="M64 26 C 80 70, 120 110, 150 134 S 220 210, 236 256"/>
-                <circle class="cross" cx="150" cy="134" r="5"/>
-                <text class="k k-g" x="196" y="40">gamma</text>
-                <text class="k k-b" x="72" y="40">alpha/beta</text>
-                <text class="axlab" x="155" y="284">relative power →</text>
-                <text class="axlab" transform="translate(12 140) rotate(-90)">depth ↓</text>
-              </svg>
-              <figcaption>Illustrative schematic, not recorded data.</figcaption>
-            </figure>
-            <p>I built the Python pipeline (bandpass filtering, common-average referencing, impedance checks and channel handling, PSD and inter-channel coherence) and a researcher-facing GUI with a FastAPI and Uvicorn backend for NWB files. I also developed and trained a PyTorch model, a ResNet-18 encoder with classification and regression heads on PSD representations, and ran the statistical analysis, working with lab colleagues.</p>
-            <dl class="metrics">
-              <div><dt>70.1%</dt><dd>of predictions on real recordings within ±10 channels of expert layer-IV labels (recording-level cross-validation; 46.4% on simulated data).</dd></div>
-              <div><dt>7 / 8</dt><dd>matched real-data cases where the pipeline found the layer-IV crossover, versus 2 / 8 for vFLIP2. A small evaluation, separate from the model result.</dd></div>
-              <div><dt>2,556</dt><dd>training samples: 1,276 expert-labeled real and 1,280 synthetic.</dd></div>
-            </dl>
-            <p class="tags"><span>Python</span><span>PyTorch</span><span>FastAPI</span><span>PyNWB</span><span>NumPy</span><span>SciPy</span></p>
-          </div>
-        </div>
-      </li>
+    <article class="paper">
+      <h2 class="ptitle">vFLIP3: Automated Brain Layer Identification Using Spectrolaminar Analysis and Machine Learning</h2>
+      <p class="authors"><b>Vyshalini Rajendran</b>, Andrew Salyer, Ashton Kroeger, Hamad Nejat, Mazyar Azmi, Yihan S. Xiong, Andre Bastos</p>
+      <p class="venue" style="font-style:italic;color:var(--muted)">Poster, VSTART Summer Research Symposium, 2026</p>
 
-      <li class="entry">
-        <div class="thumb">
-          <img src="../assets/img/research/neurostream.png" alt="NeuroStream figure" loading="lazy">
-          <span class="ph" aria-hidden="true">NS</span>
-        </div>
-        <div>
-          <h2>NeuroStream: Streaming Electrophysiology Analysis for Cortical Layer Localization</h2>
-          <p class="who">Bastos Lab, Vanderbilt Brain Institute</p>
-          <p class="venue">Abstract accepted, ABRCMS 2026 <span class="status">In development</span></p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-neurostream">Abs</button>
-          </div>
-          <div class="abs" id="abs-neurostream" hidden>
-            <p>Moves vFLIP3's offline analysis toward continuous processing. NeuroStream ingests Intan binary recordings, replays them as sequential windows, and computes rolling power-spectral-density estimates for layer localization. I'm currently implementing and validating the replay and streaming architecture.</p>
-          </div>
-        </div>
-      </li>
+      <figure class="poster">
+        <a href="../assets/img/research/vflip3-poster.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/research/vflip3-poster.jpg" alt="Research poster: vFLIP3, Automated Brain Layer Identification Using Spectrolaminar Analysis and Machine Learning" width="2400" height="1800">
+        </a>
+        <figcaption>Click the poster to view it full size.</figcaption>
+      </figure>
 
-      <li class="entry">
-        <div class="thumb">
-          <img src="../assets/img/research/thinkneuro.png" alt="ThinkNeuro poster figure" loading="lazy">
-          <span class="ph" aria-hidden="true">TN</span>
-        </div>
-        <div>
-          <h2>Deep Learning for Motor-Imagery EEG Classification: A Bibliometric Study</h2>
-          <p class="who">Research associate and team lead · ThinkNeuro</p>
-          <p class="venue">ThinkNeuro Research Internship, Spring 2026</p>
-          <div class="btns">
-            <button type="button" data-toggle aria-expanded="false" aria-controls="abs-thinkneuro">Abs</button>
-          </div>
-          <div class="abs" id="abs-thinkneuro" hidden>
-            <p>I led a team of interns analyzing 100 highly cited papers on deep-learning classification of motor-imagery EEG for brain-computer interfaces: network architectures, classification methods, citation patterns, institutional contributions and research directions. I coordinated screening, synthesis, methodology, visualization in R and the final poster, and received a certificate of recognition for leadership.</p>
-          </div>
-        </div>
-      </li>
-    </ol>
-    <p class="no-match" hidden>No research matches that filter.</p>
+      <h3>overview</h3>
+      <p>Cortex has a consistent electrical signature across its layers, called the spectrolaminar motif: gamma-band activity is strongest in the superficial layers, alpha/beta activity in the deeper ones, and the two cross near layer IV. vFLIP2 is the lab's algorithm for finding that crossover in laminar recordings so cortical layers can be identified without post-mortem histology. My goal was to build an enhanced pipeline, vFLIP3, that localizes layer IV more accurately, and a machine-learning model that does it automatically.</p>
+
+      <h3>machine learning</h3>
+      <ul class="bul">
+        <li>Trained on 2,556 samples: 1,276 real recordings from rhesus macaques performing the Global-Local Oddball Task, with expert-labeled layer IV, and 1,280 simulated recordings.</li>
+        <li>Simulated data comes from an Izhikevich-based biophysical model of a six-layer cortical column, projected to a 16-channel laminar LFP.</li>
+        <li>Pipeline: LFP windows → power spectral density → relative power matrix → ResNet-18 encoder → classifier and regressor heads that predict the layer IV channel.</li>
+        <li>Evaluated with leave-one-recording-out cross-validation, using mean absolute error and the share of predictions within ±10 channels of the expert annotation.</li>
+      </ul>
+
+      <h3>pipeline and GUI</h3>
+      <ul class="bul">
+        <li>Preprocessing: bandpass filtering, common-average referencing and bad-channel removal; electrodes with impedance outside 20–800 kΩ are marked bad and interpolated.</li>
+        <li>Magnitude-squared coherence (Welch) in the gamma band, forming a depth-by-depth coherence matrix.</li>
+        <li>A researcher-facing GUI with faster NWB loading, plot variations and a sidebar for manual adjustments. Backend: Python, FastAPI, Uvicorn, PyNWB, NumPy, SciPy and Matplotlib. Front end: HTML, CSS and JavaScript.</li>
+      </ul>
+
+      <h3>results</h3>
+      <dl class="metrics">
+        <div><dt>87.5%</dt><dd>layer IV crossover detection on matched real recordings (7 / 8), versus 25% (2 / 8) for the original vFLIP2.</dd></div>
+        <div><dt>70.1%</dt><dd>of model predictions on real recordings within ±10 channels of expert layer IV labels (n = 1,276).</dd></div>
+        <div><dt>46.4%</dt><dd>on simulated recordings under the same criterion (n = 1,280). Random guessing succeeds about 16% of the time.</dd></div>
+      </dl>
+
+      <h3>my role</h3>
+      <p>I built vFLIP3 and its GUI, developed and trained the machine-learning model, and ran the statistical analysis. Methods for the simulated data were implemented by A. Salyer, anatomical validation was designed by M. Azmi, A. Kroeger was part of the recording team, H. Nejat helped develop the framework, and Y. S. Xiong provided expert labels and overall project mentorship. Dr. Andre Bastos oversaw the project.</p>
+      <p class="fine">Supported by the National Institutes of Health (R00MH116100) and Vanderbilt startup funding.</p>
+    </article>
   </main>
 
   <footer class="footer"><p>© <span id="year">2026</span> Vyshalini Rajendran.</p></footer>

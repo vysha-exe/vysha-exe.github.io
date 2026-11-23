@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SysFlow | Vyshalini Rajendran</title>
+  <meta name="description" content="A full-stack tracking and journaling web app.">
+  <meta property="og:title" content="SysFlow | Vyshalini Rajendran">
+  <meta property="og:description" content="A full-stack tracking and journaling web app.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%233ddc7a'%3EVR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../../"><strong>Vyshalini</strong> Rajendran</a>
+      <nav aria-label="Main">
+        <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">menu</button>
+        <ul id="nav-links">
+          <li><a href="../../">about</a></li>
+          <li><a href="../../projects/" aria-current="page">projects</a></li>
+          <li><a href="../../research/">research</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" type="button" aria-label="Switch color theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page">
+    <article class="detail">
+    <a class="back" href="../">← all projects</a>
+    <h1>SysFlow</h1>
+    <p class="one">A full-stack tracking and journaling web app.</p>
+    <p class="venue">Independent project, 2026</p>
+    <div class="btns">
+      <a href="https://github.com/vysha-exe/SysFlow">Code</a>
+    </div>
+
+    <figure class="shot">
+      <div class="frame">
+        <img src="../../assets/img/projects/sysflow.png" alt="Screenshot of SysFlow">
+        <span class="ph" aria-hidden="true">assets/img/projects/sysflow.png</span>
+      </div>
+    </figure>
+
+    <h2>overview</h2>
+    <p>SysFlow is a full-stack web app for tracking sessions over time and keeping a private journal, with the user in control of what gets recorded.</p>
+
+    <h2>what it does</h2>
+    <ul class="bul">
+      <li>Live session timers that can run in parallel, with notes on the active session.</li>
+      <li>A history timeline of past sessions, with editing and analytics.</li>
+      <li>Profile management with custom field templates.</li>
+      <li>A searchable journal with full create, edit and delete.</li>
+    </ul>
+
+    <h2>how it's built</h2>
+    <ul class="bul">
+      <li>Next.js and TypeScript, with email and password accounts.</li>
+      <li>MongoDB with Mongoose, with every record scoped to the user&#x27;s workspace.</li>
+      <li>Timer changes end or split intervals cleanly so the history stays accurate.</li>
+    </ul>
+    <p class="tags"><span>TypeScript</span><span>Next.js</span><span>MongoDB</span><span>REST APIs</span></p>
+
+    <nav class="pager" aria-label="More projects"><a href="../remit/">← Remit</a><a href="../musodoro/">Musodoro →</a></nav>
+    </article>
+  </main>
+
+  <footer class="footer"><p>© <span id="year">2026</span> Vyshalini Rajendran.</p></footer>
+  <script src="../../script.js"></script>
+</body>
+</html>

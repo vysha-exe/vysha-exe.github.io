@@ -31,7 +31,7 @@
   }
 
   // Missing images fall back to a placeholder (drop files into assets/img to fill them).
-  document.querySelectorAll('.thumb img, .profile img').forEach(function (img) {
+  document.querySelectorAll('.thumb img, .profile img, .shot img').forEach(function (img) {
     function empty() { img.parentElement.classList.add('empty'); }
     if (img.complete && img.naturalWidth === 0) empty();
     img.addEventListener('error', empty);
